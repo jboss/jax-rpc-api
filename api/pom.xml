@@ -20,11 +20,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>jakarta.xml.rpc</groupId>
-        <artifactId>rpc-api-parent</artifactId>
-        <version>1.1.5-SNAPSHOT</version>
+        <groupId>org.jboss</groupId>
+        <artifactId>jboss-parent</artifactId>
+        <version>35</version>
     </parent>
-    <artifactId>jakarta.xml.rpc-api</artifactId>
+
+    <groupId>org.jboss.spec.javax.xml.rpc</groupId>
+    <artifactId>jboss-jaxrpc-api_1.1_spec</artifactId>
+    <version>2.0.0.CR1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <extension.name>javax.xml.rpc</extension.name>
@@ -52,14 +56,10 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/eclipse-ee4j/jax-rpc-api/issues</url>
-    </issueManagement>
     <scm>
-        <connection>scm:git:ssh://git@github.com/eclipse-ee4j/jax-rpc-api.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/eclipse-ee4j/jax-rpc-api.git</developerConnection>
-        <url>https://github.com/eclipse-ee4j/jax-rpc-api</url>
+        <connection>scm:git:ssh://git@github.com/jboss/jboss-jakarta-jax-rpc-api.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jboss/jboss-jakarta-jax-rpc-api.git</developerConnection>
+        <url>https://github.com/jboss/jboss-jakarta-jax-rpc-api</url>
     </scm>
 
     <developers>
@@ -96,29 +96,6 @@
                     <target>1.6</target>
                     <compilerArgument>-Xlint:unchecked</compilerArgument>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.glassfish.build</groupId>
-                <artifactId>spec-version-maven-plugin</artifactId>
-                <version>1.5</version>
-                <configuration>
-                    <specMode>jakarta</specMode>
-                    <spec>
-                        <nonFinal>${non.final}</nonFinal>
-                        <jarType>api</jarType>
-                        <specVersion>${spec.version}</specVersion>
-                        <specImplVersion>${project.version}</specImplVersion>
-                        <apiPackage>${extension.name}</apiPackage>
-                    </spec>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>set-spec-properties</goal>
-                            <goal>check-module</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -272,12 +249,12 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-           <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>4.0.3</version>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
+  <dependencies>
+      <dependency>
+          <groupId>org.jboss.spec.javax.servlet</groupId>
+          <artifactId>jboss-servlet-api_3.1_spec</artifactId>
+          <version>1.0.2.Final</version>
+          <optional>true</optional>
+      </dependency>
+  </dependencies>
 </project>
