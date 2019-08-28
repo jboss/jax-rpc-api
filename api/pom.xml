@@ -57,8 +57,8 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:ssh://git@github.com/jboss/jboss-jakarta-jax-rpc-api.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/jboss/jboss-jakarta-jax-rpc-api.git</developerConnection>
+        <connection>scm:git:https://github.com/jboss/jboss-jakarta-jax-rpc-api.git</connection>
+        <developerConnection>scm:git:https://github.com/jboss/jboss-jakarta-jax-rpc-api.git</developerConnection>
         <url>https://github.com/jboss/jboss-jakarta-jax-rpc-api</url>
     </scm>
 
@@ -107,7 +107,7 @@
                     </supportedProjectTypes>
                     <instructions>
                         <Bundle-Version>${spec.bundle.version}</Bundle-Version>
-                        <Bundle-SymbolicName>${spec.bundle.symbolic-name}</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>org.jboss.spec.javax.xml.rpc.jboss-jaxrpc-api_1.1_spec</Bundle-SymbolicName>
                         <Extension-Name>${spec.extension.name}</Extension-Name>
                         <Implementation-Version>${spec.implementation.version}</Implementation-Version>
                         <Specification-Version>${spec.specification.version}</Specification-Version>
