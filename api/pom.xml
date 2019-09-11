@@ -111,7 +111,7 @@
                         <Bundle-SymbolicName>org.jboss.spec.javax.xml.rpc.jboss-jaxrpc-api_1.1_spec</Bundle-SymbolicName>
                         <Extension-Name>${spec.extension.name}</Extension-Name>
                         <Implementation-Version>${spec.implementation.version}</Implementation-Version>
-                        <Specification-Version>${spec.specification.version}</Specification-Version>
+                        <Specification-Version>${spec.version}</Specification-Version>
                         <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
                         <Bundle-Description>
                             JavaTM APIs for XML based RPC ${spec.version} Design Specification
@@ -120,6 +120,7 @@
                         <Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
                         <Implementation-Vendor-Id>${implementation.vendor.id}</Implementation-Vendor-Id>
                         <Export-Package>${extension.name}.*; version=${spec.version}</Export-Package>
+                        <Automatic-Module-Name>beta.jboss.jaxrpc.api_1_1</Automatic-Module-Name>
                     </instructions>
                 </configuration>
                 <executions>
